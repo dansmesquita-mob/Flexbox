@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Items</title>
+</head>
+<style>
+    .container{
+        max-width:350px;
+        border: 1px solid black;
+        display: flex;
+    }
+    .item {
+        background-color: blueviolet;
+        margin: 5px;
+        color: white;
+        text-align: center;
+        flex: 1;
+    }
+    .center{
+        align-items: center;
+    }
+    .stretch{
+        align-items: stretch;
+    }
+    .start{
+        align-items:flex-start;
+    }
+    .end{
+        align-items:flex-end;
+    }
+    .baseline{
+        align-items: baseline;
+    }
+    .column{
+        flex-direction:column;
+    }
+    .central{
+        height: 300px;
+        justify-content: center;
+        
+    }
+    .central .item{
+        flex:0;
+        padding:20px;
+    }
+</style>
+<body>
+    <h1>Row</h1>
+    <p>center</p>
+    <section class="container center">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </section>
+    <p>stretch</p>
+    <section class="container stretch">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolore fugiat, neque assumenda deserunt debitis delectus ratione! Veniam aperiam sed corrupti ea, tenetur nisi iste, fuga eos voluptatum asperiores non.
+        Ea in cumque excepturi consectetur, harum atque at fugit rem eligendi accusantium quos saepe consequatur minima sint ullam doloremque nam, deleniti provident. Tenetur officia provident adipisci eveniet veniam minima eum.
+        Neque aut sint labore eligendi non, hic molestiae. Assumenda suscipit cumque porro harum dolore culpa illo aperiam, vitae, deleniti sunt sapiente vero, voluptas dignissimos! Beatae delectus rem repudiandae incidunt placeat.</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla nemo eligendi reiciendis maiores voluptates dolores sed repellat nostrum, sequi molestiae at, temporibus, beatae laboriosam eos? Praesentium hic corporis eius sunt!
+        Totam sit accusantium recusandae fuga. Possimus perferendis aliquam soluta itaque enim, eaque dicta vero nisi dolores excepturi consequuntur repellendus fugiat a ex culpa praesentium quisquam suscipit delectus corporis libero dolorum.
+        Eos voluptates beatae explicabo placeat vel vitae sunt quibusdam ex suscipit distinctio alias maiores, eaque eveniet cumque mollitia error ab ad quod quis minus possimus, similique illo! Doloremque, praesentium maiores?
+        Itaque, temporibus unde laboriosam in laudantium ab, nostrum beatae vitae enim fugit commodi eius architecto. Quod, architecto molestias deserunt adipisci itaque perspiciatis quibusdam exercitationem quo deleniti laudantium repudiandae, iusto odio?</div>
+    </section>
+
+    <p>flex-start</p>
+    <section class="container start ">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci laboriosam eum nam molestiae voluptatum facilis expedita nostrum impedit. Quae omnis maxime at ad corporis tempore, nam praesentium quas nobis doloremque.
+        Odio nihil repellat delectus eum tenetur? Tempore corrupti accusantium molestiae rem, eveniet dolore excepturi voluptates delectus consequuntur. Ipsum, earum, nam officiis repellendus ea impedit dicta est corporis maiores ex facilis.
+        Facere qui fuga eos eligendi, accusamus iusto quos iste repudiandae cumque adipisci eveniet nesciunt? Officia iure eligendi, eum, non quo nobis magnam consectetur dolor repellat necessitatibus consequatur inventore libero! Delectus!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis omnis, id odio qui, dolores amet dolor voluptatibus veniam ducimus placeat reprehenderit eum vel maiores veritatis cupiditate cum? Quia, autem laboriosam.
+        Veritatis maxime, voluptate consequuntur incidunt deleniti neque, aliquam tenetur possimus voluptatum eos nam? Eos consectetur aut tempora laborum, debitis harum omnis mollitia vitae sint dolorum, asperiores natus maiores, et eum.
+        Error cumque aut at, incidunt itaque assumenda suscipit architecto fuga, iure quisquam libero, perspiciatis voluptate nihil veritatis facilis numquam provident eligendi expedita pariatur rem accusamus! Perferendis porro esse nemo nisi.
+        Nulla obcaecati velit reprehenderit. Harum quod voluptatem quo praesentium sed eligendi aperiam recusandae quae, cum explicabo. Aspernatur, laudantium corporis? Et ut optio id atque itaque impedit facere eius, provident cum.</div>
+    </section>
+
+    <p>flex-end</p>
+    <section class="container end">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci laboriosam eum nam molestiae voluptatum facilis expedita nostrum impedit. Quae omnis maxime at ad corporis tempore, nam praesentium quas nobis doloremque.
+        Odio nihil repellat delectus eum tenetur? Tempore corrupti accusantium molestiae rem, eveniet dolore excepturi voluptates delectus consequuntur. Ipsum, earum, nam officiis repellendus ea impedit dicta est corporis maiores ex facilis.
+        Facere qui fuga eos eligendi, accusamus iusto quos iste repudiandae cumque adipisci eveniet nesciunt? Officia iure eligendi, eum, non quo nobis magnam consectetur dolor repellat necessitatibus consequatur inventore libero! Delectus!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis omnis, id odio qui, dolores amet dolor voluptatibus veniam ducimus placeat reprehenderit eum vel maiores veritatis cupiditate cum? Quia, autem laboriosam.
+        Veritatis maxime, voluptate consequuntur incidunt deleniti neque, aliquam tenetur possimus voluptatum eos nam? Eos consectetur aut tempora laborum, debitis harum omnis mollitia vitae sint dolorum, asperiores natus maiores, et eum.
+        Error cumque aut at, incidunt itaque assumenda suscipit architecto fuga, iure quisquam libero, perspiciatis voluptate nihil veritatis facilis numquam provident eligendi expedita pariatur rem accusamus! Perferendis porro esse nemo nisi.
+        Nulla obcaecati velit reprehenderit. Harum quod voluptatem quo praesentium sed eligendi aperiam recusandae quae, cum explicabo. Aspernatur, laudantium corporis? Et ut optio id atque itaque impedit facere eius, provident cum.</div>
+    </section>
+    <p>baseline</p>
+    <section class="container baseline">
+        <div class="item">1</div>
+        <div class="item"><br/> Officia iure eligendi, eum, non quo nobis magnam consectetur dolor repellat necessitatibus consequatur inventore libero! Delectus!</div>
+        <div class="item">Harum quod voluptatem quo praesentium sed eligendi aperiam recusandae quae, cum explicabo. Aspernatur, laudantium corporis? Et ut optio id atque itaque impedit facere eius, provident cum.</div>
+    </section>
+
+    <h1>Column</h1>
+    <p>flex-start</p>
+    <section class="container start column">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci laboriosam eum nam molestiae voluptatum facilis expedita nostrum impedit. Quae omnis maxime at ad corporis tempore, nam praesentium quas nobis doloremque.
+        Odio nihil repellat delectus eum tenetur? Tempore corrupti accusantium molestiae rem, eveniet dolore excepturi voluptates delectus consequuntur. Ipsum ulla obcaecati velit reprehenderit. Harum quod voluptatem quo praesentium sed eligendi aperiam recusandae quae, cum explicabo. Aspernatur, laudantium corporis? Et ut optio id atque itaque impedit facere eius, provident cum.</div>
+        <div class="item">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias libero quam iusto accusamus quis. Perferendis minus incidunt officia fugit! Et vero accusamus quasi repellendus neque quia voluptatem reprehenderit, ullam rem?</div>
+    </section>
+
+    <p>flex-end</p>
+    <section class="container end column">
+        <div class="item">1</div>
+        <div class="item">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci laboriosam eum nam molestiae voluptatum facilis expedita nostrum impedit. Quae omnis maxime at ad corporis tempore, nam praesentium quas nobis doloremque.
+        Odio nihil repellat delectus eum tenetur? Tempore corrupti accusantium molestiae rem, eveniet dolore excepturi voluptates delectus consequuntur. Ipsum, earum, nam officiis repellendus ea impedit dicta est corporis maiores ex facilis.
+        Facere qui fuga eos eligendi, accusamus iusto quos iste repudiandae cumque adipisci eveniet nesciunt? Officia iure eligendi, eum, non quo nobis magnam consectetur dolor repellat necessitatibus consequatur inventore libero! Delectus!</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis omnis, id odio qui, dolores amet dolor voluptatibus veniam ducimus placeat reprehenderit eum vel maiores veritatis cupiditate cum? Quia, autem laboriosam. Harum quod voluptatem quo praesentium sed eligendi aperiam recusandae quae, cum explicabo. Aspernatur, laudantium corporis? Et ut optio id atque itaque impedit facere eius, provident cum.</div>
+    </section>
+
+    <p>center</p>
+    <section class="container center column">
+        <div class="item">1</div>
+        <div class="item">libero! Delectus!</div>
+        <div class="item">facere eius, provident cum.</div>
+    </section>
+    <p>baseline</p>
+    <section class="container baseline column">
+        <div class="item">1</div>
+        <div class="item">libero! Delectus!</div>
+        <div class="item">facere eius, provident cum.</div>
+    </section>
+
+    <p>alinhamento central à tela</p>
+    <section class="container central center">
+        <div class="item"> Maiores, iure? Dolorum atque odit nam sit corporis velit minima. Recusandae, accusantium.</div>
+    </section>
+</body>
+</html>
